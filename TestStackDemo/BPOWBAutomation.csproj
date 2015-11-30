@@ -7,8 +7,8 @@
     <ProjectGuid>{BBBAD39F-6FD7-4CCD-AC77-AA96DF35394E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestStackDemo</RootNamespace>
-    <AssemblyName>TestStackDemo</AssemblyName>
+    <RootNamespace>BPOWBAutomation</RootNamespace>
+    <AssemblyName>BPOWBAutomation</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

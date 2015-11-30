@@ -18,8 +18,8 @@ namespace TestStackDemo.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("CreateMarineParcel", Description="In order to work with parcels\nAs a OWB user\nI want to be able to create a parcel " +
-        "successfully", SourceFile="Features\\CreateMarineParcel.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("CreateMarineParcel", Description="In order to work with parcels\r\nAs a OWB user\r\nI want to be able to create a parce" +
+        "l successfully", SourceFile="Features\\CreateMarineParcel.feature", SourceLine=0)]
     public partial class CreateMarineParcelFeature
     {
         
@@ -32,8 +32,8 @@ namespace TestStackDemo.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CreateMarineParcel", "In order to work with parcels\nAs a OWB user\nI want to be able to create a parcel " +
-                    "successfully", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CreateMarineParcel", "In order to work with parcels\r\nAs a OWB user\r\nI want to be able to create a parce" +
+                    "l successfully", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
