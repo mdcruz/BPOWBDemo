@@ -8,5 +8,6 @@ namespace TestStackDemo
 {
     public class Class1
     {
+        //Github! yay!
     }
 }
