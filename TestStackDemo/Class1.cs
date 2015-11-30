@@ -1,23 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading;
 using TestStack.White;
-using TestStack.White.Factory;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
-using TestStack.White.UIItems.TabItems;
 using TestStack.White.UIItems.WindowItems;
-using TestStack.White.AutomationElementSearch;
-using TestStack.White.Recording;
-using TestStack.White.UIItemEvents;
-using TestStack.White.UIItems.Actions;
-using TestStack.White.UIItems.Scrolling;
-//using System.Windows.Automation;
 
-namespace TestStackDemo
+namespace BPOWBAutomation
 {
     class Class1
     {

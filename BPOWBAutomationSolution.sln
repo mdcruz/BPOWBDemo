@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestStackDemo", "TestStackDemo\TestStackDemo.csproj", "{BBBAD39F-6FD7-4CCD-AC77-AA96DF35394E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPOWBAutomation", "TestStackDemo\BPOWBAutomation.csproj", "{BBBAD39F-6FD7-4CCD-AC77-AA96DF35394E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPOWBHelpers", "BPOWBHelpers\BPOWBHelpers.csproj", "{5F185DF8-DF8D-4237-80D4-95CA0AEB3880}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BBBAD39F-6FD7-4CCD-AC77-AA96DF35394E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBBAD39F-6FD7-4CCD-AC77-AA96DF35394E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBBAD39F-6FD7-4CCD-AC77-AA96DF35394E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F185DF8-DF8D-4237-80D4-95CA0AEB3880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F185DF8-DF8D-4237-80D4-95CA0AEB3880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F185DF8-DF8D-4237-80D4-95CA0AEB3880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F185DF8-DF8D-4237-80D4-95CA0AEB3880}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
