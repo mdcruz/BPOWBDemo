@@ -4,7 +4,7 @@ using TechTalk.SpecFlow;
 
 namespace BPOWBAutomation.StepDefinitions.OWB
 {
-    [Binding]
+    [Binding, Scope(Tag = "OWB")]
     public class CommonSteps : WinFeatureBase
     {
         [Given(@"I am logged in to OWB application")]
