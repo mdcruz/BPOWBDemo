@@ -18,6 +18,7 @@ namespace BPOWBAutomation.StepDefinitions.OWB
         public void GivenIAmOnTheShipmentsTab(string tabName)
         {
             WinViewBase.MenuBarView.SelectTab(tabName);
+            //Assert
         }
 
     }
