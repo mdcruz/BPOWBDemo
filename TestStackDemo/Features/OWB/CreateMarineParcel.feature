@@ -7,6 +7,7 @@
 		Given I am logged in to OWB application
 		And I am on the Shipments tab
 
+	@OWB
 	Scenario Outline: Ability to create a planned parcel
 		Given I have filled in the mandatory fields to create a planned <ParcelType> with <Quantity> 
 		When I create the parcel

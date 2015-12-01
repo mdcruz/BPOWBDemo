@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPOWBAutomation", "TestStac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPOWBHelpers", "BPOWBHelpers\BPOWBHelpers.csproj", "{5F185DF8-DF8D-4237-80D4-95CA0AEB3880}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPOWBViewsLibrary", "BPOWBViewsLibrary\BPOWBViewsLibrary.csproj", "{B924AC9D-687E-485D-A6AB-4D2016B2F56F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5F185DF8-DF8D-4237-80D4-95CA0AEB3880}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F185DF8-DF8D-4237-80D4-95CA0AEB3880}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F185DF8-DF8D-4237-80D4-95CA0AEB3880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B924AC9D-687E-485D-A6AB-4D2016B2F56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B924AC9D-687E-485D-A6AB-4D2016B2F56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B924AC9D-687E-485D-A6AB-4D2016B2F56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B924AC9D-687E-485D-A6AB-4D2016B2F56F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

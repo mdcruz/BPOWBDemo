@@ -1,9 +1,15 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TestStackDemo.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BPOWBAutomation.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="OWBFilePath" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\OWB_VS\OWB\OWB\Main\Source\Owb\BP.OWB.Container\bin\Debug\Bp.Owb.Desktop.exe</Value>
+    </Setting>
+    <Setting Name="OWBUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">guest2</Value>
+    </Setting>
+    <Setting Name="OWBPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">guest</Value>
     </Setting>
   </Settings>
 </SettingsFile>
