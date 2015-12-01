@@ -49,5 +49,14 @@ namespace BPOWBAutomation.Properties {
                 return ((string)(this["OWBPassword"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Operators WorkBench")]
+        public string WindowName {
+            get {
+                return ((string)(this["WindowName"]));
+            }
+        }
     }
 }

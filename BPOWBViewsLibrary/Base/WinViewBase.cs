@@ -1,4 +1,5 @@
-﻿using BPOWBViewsLibrary.Views;
+﻿using BPOWBHelpers;
+using BPOWBViewsLibrary.Views;
 using System;
 using System.Linq;
 using TestStack.White;
@@ -11,11 +12,18 @@ namespace BPOWBViewsLibrary.Base
     {
         private Application application;
 
+        #region Page views
         public LoginView LoginView
         {
-            get { return new LoginView(GetWindow("Operators WorkBench")); }
+            get { return new LoginView(GetWindow(AppConfigHelper.Get("WindowName"))); }
         }
 
+        public MenuBarView MenuBarView
+        {
+            get { return new MenuBarView(GetWindow(AppConfigHelper.Get("WindowName"))); }
+        }
+
+        #endregion
         public void Initialise(Application application)
         {
             this.application = application;
@@ -24,7 +32,7 @@ namespace BPOWBViewsLibrary.Base
         private Window GetWindow(string windowName)
         {
             return Retry.For(
-                () => application.GetWindows().First(x => x.Title.Contains(windowName)), TimeSpan.FromSeconds(20));
+                () => application.GetWindows().First(x => x.Title.Contains(windowName)), TimeSpan.FromSeconds(30));
         }
     }
 }
