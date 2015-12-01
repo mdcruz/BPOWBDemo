@@ -1,6 +1,5 @@
 ﻿using BPOWBAutomation.Features;
 using BPOWBViewsLibrary.Base;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TechTalk.SpecFlow;
 
 namespace BPOWBAutomation.StepDefinitions.OWB
@@ -11,13 +10,13 @@ namespace BPOWBAutomation.StepDefinitions.OWB
         [Given(@"I am logged in to OWB application")]
         public void GivenIAmLoggedInToOWBApplication()
         {
-            WinViewBase.LoginView.Login();
+            OWBViews.LoginView.Login();
         }
 
         [Given(@"I am on the (.*) tab")]
         public void GivenIAmOnTheShipmentsTab(string tabName)
         {
-            WinViewBase.MenuBarView.SelectTab(tabName);
+            OWBViews.MenuBarView.SelectTab(tabName);
         }
 
     }
