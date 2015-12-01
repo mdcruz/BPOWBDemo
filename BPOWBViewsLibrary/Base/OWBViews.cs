@@ -8,7 +8,7 @@ using TestStack.White.Utility;
 
 namespace BPOWBViewsLibrary.Base
 {
-    public class WinViewBase
+    public class OWBViews
     {
         private Application application;
 

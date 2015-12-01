@@ -1,10 +1,9 @@
 ﻿using BPOWBViewsLibrary.Base;
 using BPOWBViewsLibrary.Model;
+using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
+using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.TabItems;
 using TestStack.White.UIItems.WindowItems;
@@ -21,6 +20,9 @@ namespace BPOWBViewsLibrary.Views
 
         public void SelectTab(string tabName)
         {
+            _window.RightClick();
+            WaitUntilVisible(_window.Get<Button>(SearchCriteria.ByText("Show")), "Main tab not loaded within the specified duration");
+                    
             if (tabName.Equals("Dashboard"))
             {
                 MainTab.SelectTabPage((int)Enums.TabNames.Dashboard);
@@ -45,7 +47,6 @@ namespace BPOWBViewsLibrary.Views
             {
                 throw new ArgumentException("Tab name provided not valid");
             }
-
         }
     }
 }

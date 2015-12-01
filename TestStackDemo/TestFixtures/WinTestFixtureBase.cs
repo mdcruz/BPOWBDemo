@@ -8,7 +8,7 @@ namespace BPOWBAutomation.TestFixtures
     public class WinTestFixtureBase
     {
         protected Application CurrentApplication { get; set; }
-        protected WinViewBase WinViewBase { get; set; }
+        protected OWBViews OWBViews { get; set; }
 
         public void TestSetup(string filePath)
         {
@@ -17,8 +17,8 @@ namespace BPOWBAutomation.TestFixtures
 
             CurrentApplication = Application.AttachOrLaunch(process);
 
-            WinViewBase = new WinViewBase();
-            WinViewBase.Initialise(CurrentApplication);
+            OWBViews = new OWBViews();
+            OWBViews.Initialise(CurrentApplication);
         }
 
         public void TestTeardown()

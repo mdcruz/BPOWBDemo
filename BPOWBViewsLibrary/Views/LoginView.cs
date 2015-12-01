@@ -1,5 +1,6 @@
 ﻿using BPOWBViewsLibrary.Base;
 using BPOWBViewsLibrary.Model;
+using System.Threading;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.WindowItems;
@@ -34,7 +35,10 @@ namespace BPOWBViewsLibrary.Views
 
             UsernameField.SetValue(defaultUser.Username);
             PasswordField.SetValue(defaultUser.Password);
+
+            WaitUntilVisible(LoginBtn);
             LoginBtn.Click();
+            WaitUntilNotVisible(LoginBtn);
         }
 
     }
