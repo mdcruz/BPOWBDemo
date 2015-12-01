@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace TestStackDemo.Features
+namespace BPOWBAutomation.Features.OWB
 {
     using TechTalk.SpecFlow;
     
@@ -19,7 +19,7 @@ namespace TestStackDemo.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [TechTalk.SpecRun.FeatureAttribute("CreateMarineParcel", Description="In order to work with parcels\r\nAs a OWB user\r\nI want to be able to create a parce" +
-        "l successfully", SourceFile="Features\\CreateMarineParcel.feature", SourceLine=0)]
+        "l successfully", SourceFile="Features\\OWB\\CreateMarineParcel.feature", SourceLine=0)]
     public partial class CreateMarineParcelFeature
     {
         
@@ -76,52 +76,64 @@ namespace TestStackDemo.Features
         
         public virtual void AbilityToCreateAPlannedParcel(string parcelType, string quantity, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ability to create a planned parcel", exampleTags);
-#line 10
+            string[] @__tags = new string[] {
+                    "OWB"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ability to create a planned parcel", @__tags);
+#line 11
  this.ScenarioSetup(scenarioInfo);
 #line 6
  this.FeatureBackground();
-#line 11
-  testRunner.Given(string.Format("I have filled in the mandatory fields to create a planned {0} with {1}", parcelType, quantity), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
-  testRunner.When("I create the parcel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+  testRunner.Given(string.Format("I have filled in the mandatory fields to create a planned {0} with {1}", parcelType, quantity), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
+  testRunner.When("I create the parcel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
   testRunner.Then("the parcel should be created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 0", SourceLine=16)]
+        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 0", new string[] {
+                "OWB"}, SourceLine=17)]
         public virtual void AbilityToCreateAPlannedParcel_Variant0()
         {
             this.AbilityToCreateAPlannedParcel("Purchase", "100 BBL", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 1", SourceLine=17)]
+        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 1", new string[] {
+                "OWB"}, SourceLine=18)]
         public virtual void AbilityToCreateAPlannedParcel_Variant1()
         {
             this.AbilityToCreateAPlannedParcel("Sale", "100 BBL", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 2", SourceLine=18)]
+        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 2", new string[] {
+                "OWB"}, SourceLine=19)]
         public virtual void AbilityToCreateAPlannedParcel_Variant2()
         {
             this.AbilityToCreateAPlannedParcel("Sale", "99.5 BBL", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 3", SourceLine=19)]
+        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 3", new string[] {
+                "OWB"}, SourceLine=20)]
         public virtual void AbilityToCreateAPlannedParcel_Variant3()
         {
             this.AbilityToCreateAPlannedParcel("Sale", "0.5 BBL", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 4", SourceLine=20)]
+        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 4", new string[] {
+                "OWB"}, SourceLine=21)]
         public virtual void AbilityToCreateAPlannedParcel_Variant4()
         {
             this.AbilityToCreateAPlannedParcel("Stock From", "100 BBL", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 5", SourceLine=21)]
+        [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 5", new string[] {
+                "OWB"}, SourceLine=22)]
         public virtual void AbilityToCreateAPlannedParcel_Variant5()
         {
             this.AbilityToCreateAPlannedParcel("Stock To", "100 BBL", ((string[])(null)));

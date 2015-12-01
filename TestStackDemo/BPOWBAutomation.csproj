@@ -66,28 +66,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
-    <Compile Include="Features\CreateMarineParcel.feature.cs">
+    <Compile Include="Features\OWB\CreateMarineParcel.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CreateMarineParcel.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\WinFeatureBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="StepDefinitions\CommonSteps.cs" />
-    <Compile Include="StepDefinitions\CreateMarineParcelSteps.cs" />
+    <Compile Include="StepDefinitions\ManualSteps.cs" />
+    <Compile Include="StepDefinitions\OWB\CommonSteps.cs" />
+    <Compile Include="StepDefinitions\OWB\CreateMarineParcelSteps.cs" />
+    <Compile Include="StepDefinitions\PendingSteps.cs" />
+    <Compile Include="TestFixtures\WinTestFixtureBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Features\CreateMarineParcel.feature">
+    <None Include="Features\OWB\CreateMarineParcel.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CreateMarineParcel.feature.cs</LastGenOutput>
     </None>
@@ -104,13 +106,15 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PageViews\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BPOWBHelpers\BPOWBHelpers.csproj">
       <Project>{5f185df8-df8d-4237-80d4-95ca0aeb3880}</Project>
       <Name>BPOWBHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BPOWBViewsLibrary\BPOWBViewsLibrary.csproj">
+      <Project>{b924ac9d-687e-485d-a6ab-4d2016b2f56f}</Project>
+      <Name>BPOWBViewsLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

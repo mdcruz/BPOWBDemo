@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TestStackDemo.Properties {
+namespace BPOWBAutomation.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -29,6 +29,24 @@ namespace TestStackDemo.Properties {
         public string OWBFilePath {
             get {
                 return ((string)(this["OWBFilePath"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("guest2")]
+        public string OWBUsername {
+            get {
+                return ((string)(this["OWBUsername"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("guest")]
+        public string OWBPassword {
+            get {
+                return ((string)(this["OWBPassword"]));
             }
         }
     }

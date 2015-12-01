@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestStackDemo.StepDefinitions
+namespace BPOWBAutomation.StepDefinitions.OWB
 {
     class CreateMarineParcelSteps
     {
