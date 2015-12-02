@@ -11,6 +11,7 @@ namespace BPOWBAutomation.StepDefinitions.OWB
         public void GivenIAmLoggedInToOWBApplication()
         {
             OWBViews.LoginView.Login();
+            OWBViews.DashboardView.WaitForDashboard();
         }
 
         [Given(@"I am on the (.*) tab")]
