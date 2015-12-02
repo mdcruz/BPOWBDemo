@@ -12,7 +12,7 @@ using TechTalk.SpecFlow;
 
 namespace BPOWBAutomation.StepDefinitions
 {
-    [Binding, Scope(Tag = "Pending")]
+    //[Binding, Scope(Tag = "Pending")]
     public class PendingSteps
     {
         [Given(".*"), When(".*"), Then(".*")]

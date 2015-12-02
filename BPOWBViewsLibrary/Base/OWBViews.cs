@@ -23,7 +23,17 @@ namespace BPOWBViewsLibrary.Base
             get { return new MenuBarView(GetWindow(AppConfigHelper.Get("WindowName"))); }
         }
 
+        public ShipmentView ShipmentView
+        {
+            get { return new ShipmentView(GetWindow(AppConfigHelper.Get("WindowName"))); }
+        }
+
+        public DashboardView DashboardView
+        {
+            get { return new DashboardView(GetWindow(AppConfigHelper.Get("WindowName"))); }
+        }
         #endregion
+
         public void Initialise(Application application)
         {
             this.application = application;

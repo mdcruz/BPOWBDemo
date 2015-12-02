@@ -74,7 +74,7 @@ namespace BPOWBAutomation.Features.OWB
 #line hidden
         }
         
-        public virtual void AbilityToCreateAPlannedParcel(string parcelType, string quantity, string[] exampleTags)
+        public virtual void AbilityToCreateAPlannedParcel(string parcelType, string quantity, string transportType, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "OWB"};
@@ -88,55 +88,57 @@ namespace BPOWBAutomation.Features.OWB
 #line 6
  this.FeatureBackground();
 #line 12
-  testRunner.Given(string.Format("I have filled in the mandatory fields to create a planned {0} with {1}", parcelType, quantity), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+  testRunner.Given(string.Format("I create New Planned Parcel with {0}", transportType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
-  testRunner.When("I create the parcel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+        testRunner.And(string.Format("I fill in mandatory fields to create planned {0} with {1}", parcelType, quantity), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
+  testRunner.When("I create the parcel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
   testRunner.Then("the parcel should be created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 0", new string[] {
-                "OWB"}, SourceLine=17)]
+                "OWB"}, SourceLine=18)]
         public virtual void AbilityToCreateAPlannedParcel_Variant0()
         {
-            this.AbilityToCreateAPlannedParcel("Purchase", "100 BBL", ((string[])(null)));
+            this.AbilityToCreateAPlannedParcel("PURCHASE", "100 BBL", "VESSEL", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 1", new string[] {
-                "OWB"}, SourceLine=18)]
+                "OWB"}, SourceLine=19)]
         public virtual void AbilityToCreateAPlannedParcel_Variant1()
         {
-            this.AbilityToCreateAPlannedParcel("Sale", "100 BBL", ((string[])(null)));
+            this.AbilityToCreateAPlannedParcel("SALE", "100 BBL", "BARGE", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 2", new string[] {
-                "OWB"}, SourceLine=19)]
+                "OWB"}, SourceLine=20)]
         public virtual void AbilityToCreateAPlannedParcel_Variant2()
         {
-            this.AbilityToCreateAPlannedParcel("Sale", "99.5 BBL", ((string[])(null)));
+            this.AbilityToCreateAPlannedParcel("SALE", "99.5 BBL", "TANK", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 3", new string[] {
-                "OWB"}, SourceLine=20)]
+                "OWB"}, SourceLine=21)]
         public virtual void AbilityToCreateAPlannedParcel_Variant3()
         {
-            this.AbilityToCreateAPlannedParcel("Sale", "0.5 BBL", ((string[])(null)));
+            this.AbilityToCreateAPlannedParcel("SALE", "0.5 BBL", "TRAIN", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 4", new string[] {
-                "OWB"}, SourceLine=21)]
+                "OWB"}, SourceLine=22)]
         public virtual void AbilityToCreateAPlannedParcel_Variant4()
         {
-            this.AbilityToCreateAPlannedParcel("Stock From", "100 BBL", ((string[])(null)));
+            this.AbilityToCreateAPlannedParcel("STK FROM", "100 BBL", "PUMPOVER", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Ability to create a planned parcel, Variant 5", new string[] {
-                "OWB"}, SourceLine=22)]
+                "OWB"}, SourceLine=23)]
         public virtual void AbilityToCreateAPlannedParcel_Variant5()
         {
-            this.AbilityToCreateAPlannedParcel("Stock To", "100 BBL", ((string[])(null)));
+            this.AbilityToCreateAPlannedParcel("STK TO", "100 BBL", "VESSEL", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]
