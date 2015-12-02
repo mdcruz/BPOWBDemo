@@ -1,9 +1,6 @@
 ﻿using BPOWBViewsLibrary.Base;
 using BPOWBViewsLibrary.Model;
-using NUnit.Framework;
 using System;
-using System.Threading;
-using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.TabItems;
 using TestStack.White.UIItems.WindowItems;
@@ -19,10 +16,7 @@ namespace BPOWBViewsLibrary.Views
         public MenuBarView(Window window) : base(window) { }
 
         public void SelectTab(string tabName)
-        {
-            _window.RightClick();
-            WaitUntilVisible(_window.Get<Button>(SearchCriteria.ByText("Show")), "Main tab not loaded within the specified duration");
-                    
+        {           
             if (tabName.Equals("Dashboard"))
             {
                 MainTab.SelectTabPage((int)Enums.TabNames.Dashboard);

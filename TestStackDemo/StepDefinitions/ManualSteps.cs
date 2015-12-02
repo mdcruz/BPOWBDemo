@@ -8,7 +8,7 @@
 
 namespace BPOWBAutomation.StepDefinitions
 {
-    [Binding, Scope(Tag = "Manual")]
+    //[Binding, Scope(Tag = "Manual")]
     public class ManualSteps
     {
         [Given(".*"), When(".*"), Then(".*")]

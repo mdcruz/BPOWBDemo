@@ -36,7 +36,7 @@ namespace BPOWBViewsLibrary.Views
             UsernameField.SetValue(defaultUser.Username);
             PasswordField.SetValue(defaultUser.Password);
 
-            WaitUntilVisible(LoginBtn);
+            Thread.Sleep(500);
             LoginBtn.Click();
             WaitUntilNotVisible(LoginBtn);
         }

@@ -9,15 +9,16 @@
 
 	@OWB
 	Scenario Outline: Ability to create a planned parcel
-		Given I have filled in the mandatory fields to create a planned <ParcelType> with <Quantity> 
+		Given I create New Planned Parcel with <TransportType> 
+        And I fill in mandatory fields to create planned <ParcelType> with <Quantity> 
 		When I create the parcel
 		Then the parcel should be created successfully
 
 		Examples:
-		| ParcelType | Quantity |
-		| Purchase   | 100 BBL  |
-		| Sale       | 100 BBL  |
-		| Sale       | 99.5 BBL |
-		| Sale       | 0.5 BBL  |
-		| Stock From | 100 BBL  |
-		| Stock To   | 100 BBL  |
+		| ParcelType | Quantity | TransportType |
+		| PURCHASE   | 100 BBL  | VESSEL        |
+		| SALE       | 100 BBL  | BARGE         |
+		| SALE       | 99.5 BBL | TANK          |
+		| SALE       | 0.5 BBL  | TRAIN         |
+		| STK FROM   | 100 BBL  | PUMPOVER      |
+		| STK TO     | 100 BBL  | VESSEL        |
