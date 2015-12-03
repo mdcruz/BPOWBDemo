@@ -30,7 +30,16 @@ namespace BPOWBViewsLibrary.Views
 
         private ComboBox QuantityCbx
         {
-            get { return ComboBox(SearchCriteria.ByAutomationId("QuantityCbx")); }
+            get { return ComboBox(SearchCriteria.ByAutomationId("QuantityType")); }
+        }
+
+        private UIItem PlannedDateFrom
+        {
+            get { return UIItem(SearchCriteria.ByAutomationId("PlannedDatesFrom"));  }
+        }
+        private UIItem PlannedDateTo
+        {
+            get { return UIItem(SearchCriteria.ByAutomationId("PlannedDatesTo")); }
         }
 
         private TextBox Quantity
@@ -67,6 +76,16 @@ namespace BPOWBViewsLibrary.Views
             AutomationElement childElementQuantity = GetChildElement(QuantityCbx, new PropertyCondition(AutomationElement.AutomationIdProperty, ElementProperties.EditableTxtBox));
             TextBox quantityTxtbox = new TextBox(childElementQuantity, new NullActionListener());
             quantityTxtbox.SetValue("BBL");
+
+            AutomationElement childElementPlannedDatesFrom = GetChildElement(PlannedDateFrom, new PropertyCondition(AutomationElement.AutomationIdProperty, ElementProperties.TimeInputTxtBox));
+            Label plannedDatesFromLabel = new Label(childElementPlannedDatesFrom, new NullActionListener());
+            plannedDatesFromLabel.SetValue(DateTime.Now.ToString("dd-MMM-yyyy"));
+
+            AutomationElement childElementPlannedDatesTo = GetChildElement(PlannedDateTo, new PropertyCondition(AutomationElement.AutomationIdProperty, ElementProperties.TimeInputTxtBox));
+            Label plannedDatesToLabel = new Label(childElementPlannedDatesTo, new NullActionListener());
+
+            //ADD 30 days
+            plannedDatesToLabel.SetValue(DateTime.Now.ToString("dd-MMM-yyyy"));
         }
     }
 }
