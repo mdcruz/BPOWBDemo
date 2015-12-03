@@ -1,16 +1,11 @@
 ﻿using BPOWBViewsLibrary.Base;
 using BPOWBViewsLibrary.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Automation;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Actions;
 using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.ListBoxItems;
-using TestStack.White.UIItems.MenuItems;
 using TestStack.White.UIItems.WindowItems;
 using TestStack.White.UIItems.WindowStripControls;
 
@@ -18,7 +13,8 @@ namespace BPOWBViewsLibrary.Views
 {
     public class ShipmentView : WinElementBase
     {
-        private MenuBar CreateParcel
+        #region Elements
+        private MenuBar CreateParcelBtn
         {
             get { return MenuBar(SearchCriteria.ByAutomationId("btnNewPlanned")); }
         }
@@ -47,12 +43,33 @@ namespace BPOWBViewsLibrary.Views
             get { return TextBox(SearchCriteria.ByAutomationId("TxtStdVol")); }
         }
 
+        private Button SaveParcelBtn
+        {
+            get { return Button(SearchCriteria.ByAutomationId("btnSaveDirty")); }
+        }
+
+        private ListBox NotificationMsg
+        {
+            get { return ListBox(SearchCriteria.ByAutomationId("GvErrors")); }
+        }
+
+        private Label ShipmentNumber
+        {
+            get { return Label(SearchCriteria.ByAutomationId("ShipmentNumber")); }
+        }
+
+        private Label ParcelSeqNumber
+        {
+            get { return Label(SearchCriteria.ByAutomationId("ParcelSeqNumber")); }
+        }
+        #endregion
+
         public ShipmentView(Window window) : base(window) { }
 
         public ShipmentView ClickNewPlannedParcel()
         {
-            WaitUntilVisible(CreateParcel);
-            CreateParcel.Click();
+            WaitUntilVisible(CreateParcelBtn);
+            CreateParcelBtn.Click();
 
             return this;
         }
@@ -65,7 +82,7 @@ namespace BPOWBViewsLibrary.Views
             return this;
         }
 
-        public void FillMandatoryDetailsToCreateParcel(string parcelType, int quantity)
+        public void FillMandatoryDetailsToCreateParcel(string parcelType, double quantity)
         {
             AutomationElement childElementParcel = GetChildElement(ParcelCbx, new PropertyCondition(AutomationElement.AutomationIdProperty, ElementProperties.EditableTxtBox));
             TextBox parcelTxtbox = new TextBox(childElementParcel, new NullActionListener());
@@ -78,14 +95,30 @@ namespace BPOWBViewsLibrary.Views
             quantityTxtbox.SetValue("BBL");
 
             AutomationElement childElementPlannedDatesFrom = GetChildElement(PlannedDateFrom, new PropertyCondition(AutomationElement.AutomationIdProperty, ElementProperties.TimeInputTxtBox));
-            Label plannedDatesFromLabel = new Label(childElementPlannedDatesFrom, new NullActionListener());
-            plannedDatesFromLabel.SetValue(DateTime.Now.ToString("dd-MMM-yyyy"));
+            TextBox plannedDatesFromTxtbox = new TextBox(childElementPlannedDatesFrom, new NullActionListener());
+            plannedDatesFromTxtbox.SetValue(DateTime.Now.ToString("dd-MMM-yyyy"));
 
             AutomationElement childElementPlannedDatesTo = GetChildElement(PlannedDateTo, new PropertyCondition(AutomationElement.AutomationIdProperty, ElementProperties.TimeInputTxtBox));
-            Label plannedDatesToLabel = new Label(childElementPlannedDatesTo, new NullActionListener());
+            TextBox plannedDatesToTxtbox = new TextBox(childElementPlannedDatesTo, new NullActionListener());
+            plannedDatesToTxtbox.SetValue(DateTime.Now.AddDays(30).ToString("dd-MMM-yyyy"));
+        }
 
-            //ADD 30 days
-            plannedDatesToLabel.SetValue(DateTime.Now.ToString("dd-MMM-yyyy"));
+        public void SaveParcel()
+        {
+            WaitUntilEnabled(SaveParcelBtn);
+            SaveParcelBtn.Click();
+        }
+
+        public bool IsParcelCreatedSuccessfully()
+        {
+            AutomationElement childElementNotification = GetChildElement(NotificationMsg, new PropertyCondition(AutomationElement.AutomationIdProperty, ElementProperties.NotificationMessage));
+            Label parcelSuccessfulLabel = new Label(childElementNotification, new NullActionListener());
+
+            var shipmentNum = ShipmentNumber.Text.Substring(12).TrimEnd();
+            var seqNum = ParcelSeqNumber.Text[0];
+            var actualTxt = "Parcel '" + seqNum + "' for shipment '" + shipmentNum + "' created successfully.";
+
+            return (parcelSuccessfulLabel.Text.Equals(actualTxt)) ? true : false;
         }
     }
 }

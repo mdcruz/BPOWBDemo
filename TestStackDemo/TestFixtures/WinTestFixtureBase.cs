@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using TestStack.White;
+using TestStack.White.Configuration;
 
 namespace BPOWBAutomation.TestFixtures
 {
@@ -12,6 +13,8 @@ namespace BPOWBAutomation.TestFixtures
 
         public void TestSetup(string filePath)
         {
+            CoreAppXmlConfiguration.Instance.BusyTimeout = 60000;
+
             ProcessStartInfo process = new ProcessStartInfo(filePath);
             process.WorkingDirectory = Path.GetDirectoryName(filePath);
 

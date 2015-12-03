@@ -1,15 +1,10 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Windows.Automation;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.ListBoxItems;
-using TestStack.White.UIItems.MenuItems;
 using TestStack.White.UIItems.TabItems;
-using TestStack.White.UIItems.TableItems;
 using TestStack.White.UIItems.WindowItems;
 using TestStack.White.UIItems.WindowStripControls;
 
@@ -50,6 +45,11 @@ namespace BPOWBViewsLibrary.Base
             return _window.Get<ListItem>(criteria);
         }
 
+        protected ListBox ListBox(SearchCriteria criteria)
+        {
+            return _window.Get<ListBox>(criteria);
+        }
+
         protected ComboBox ComboBox(SearchCriteria criteria)
         {
             return _window.Get<ComboBox>(criteria);
@@ -58,6 +58,11 @@ namespace BPOWBViewsLibrary.Base
         protected UIItem UIItem(SearchCriteria criteria)
         {
             return _window.Get<UIItem>(criteria);
+        }
+
+        protected Label Label(SearchCriteria criteria)
+        {
+            return _window.Get<Label>(criteria);
         }
 
         #endregion

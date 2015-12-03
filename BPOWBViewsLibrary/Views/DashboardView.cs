@@ -1,5 +1,5 @@
 ﻿using BPOWBViewsLibrary.Base;
-using System.Threading;
+using TestStack.White.Configuration;
 using TestStack.White.UIItems.Finders;
 using TestStack.White.UIItems.ListBoxItems;
 using TestStack.White.UIItems.WindowItems;
@@ -8,18 +8,17 @@ namespace BPOWBViewsLibrary.Views
 {
     public class DashboardView : WinElementBase
     {
-        private ListItem DashboardListItem
+        private ListBox Dashboard
         {
-            get { return ListItem(SearchCriteria.ByText("BP.OWB.Dashboard.Utility.NotificationCategory")); }
+            get { return ListBox(SearchCriteria.ByAutomationId("categoryListBox")); }
         }
 
         public DashboardView(Window window) : base(window) { }
 
         public void WaitForDashboard()
-        {
-            Thread.Sleep(5000);
+        {   
             _window.RightClick();
-            WaitUntilVisible(DashboardListItem);
+            WaitUntilVisible(Dashboard, "Dashboard not loaded within specified duration");
         }
     }
 }
