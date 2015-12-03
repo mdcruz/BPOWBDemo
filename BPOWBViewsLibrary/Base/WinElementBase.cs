@@ -55,6 +55,11 @@ namespace BPOWBViewsLibrary.Base
             return _window.Get<ComboBox>(criteria);
         }
 
+        protected UIItem UIItem(SearchCriteria criteria)
+        {
+            return _window.Get<UIItem>(criteria);
+        }
+
         #endregion
 
         #region Explicit waits

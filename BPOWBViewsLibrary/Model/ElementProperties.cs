@@ -9,5 +9,6 @@ namespace BPOWBViewsLibrary.Model
     public class ElementProperties
     {
         public const string EditableTxtBox = "PART_EditableTextBox";
+        public const string TimeInputTxtBox = "Enter date";
     }
 }
